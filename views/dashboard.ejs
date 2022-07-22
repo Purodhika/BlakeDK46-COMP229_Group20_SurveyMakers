@@ -11,7 +11,7 @@
     <div class="row">   
       <div class="col-md-offset-1 col-md-10">
         <h3>Surveys List: </h3>
-        <!-- <a href="movies/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add</a> -->
+        <a href="/surveys/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add</a> -->
         <br>
         <div class="table-responsive">
           <table class="table table-bordered table-striped table-hover">
@@ -20,8 +20,8 @@
                 <th>Title</th>
                 <th class="text-center">Title</th>
                 <th class="text-center">Descripton</th>
-                <th class="text-center">Respond</th>
-                <th class="text-center"> extraTableHeader </th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
               </tr>
               </thead>
               <tbody>
@@ -32,10 +32,10 @@
                 <td class="text-center"><%= list[count].Title %></td>
                 <td class="text-center"><%= list[count].Descripton %></td>
                 <td class="text-center">
-                  <a href="movies/edit/<%= list[count]._id %>" class="btn btn-primary btn-sm">Edit</a>
+                  <a href="/surveys/edit/<%= list[count]._id %>" class="btn btn-primary btn-sm">Edit</a>
                   </td>
                   <td class="text-center">
-                  <a href="movies/delete/<%= list[count]._id %>" class="btn btn-danger btn-sm">Delete</a>
+                  <a href="/surveys/delete/<%= list[count]._id %>" class="btn btn-danger btn-sm">Delete</a>
                 </td>
               </tr>
               <% } %>
