@@ -13,13 +13,13 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "mongoose": "^6.4.6",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.16",
     "popper.js": "^1.16.1"
   },
   "description": "assignment1",
   "main": "app.js",
-  "devDependencies": {},
   "author": "Meet Nakrani",
   "license": "ISC"
 }
