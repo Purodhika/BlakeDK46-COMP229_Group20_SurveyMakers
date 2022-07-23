@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+let surveyModel = require('../models/surveys');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -11,10 +12,24 @@ router.get('/home', function (req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
+
 /* GET dashboard page. */
+//Added by Lyudmila Zhurba 
+
 router.get('/dashboard', function (req, res, next) {
-  res.render('dashboard', { title: 'Dashboard' });
+
+  surveyModel.find({}, null, (err, all) => {
+    if(err)
+    {
+        return console.error(err);
+    }
+    else
+    {
+        res.render('dashboard', { title: 'Dashboard', list: all });
+      }
+    });
 });
+
 
 /* GET About Us page. */
 router.get('/about', function (req, res, next) {
